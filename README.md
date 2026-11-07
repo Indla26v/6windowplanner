@@ -37,12 +37,20 @@ A worked example over the next 365 days, using the planner's own numbers: Claude
 | Cash spent | ₹23,988 | ₹17,991 | **₹19,990** | ₹21,989 |
 | **Saved vs auto-renew** | — | **₹5,997 (25%)** | **₹3,998 (17%)** | ₹1,999 (8%) |
 | Weekly windows paid for | 53 | 55 | **60** | 64 |
+| **Weekly limits: 53 + a** | 53 + 0 | 53 + 2 | **53 + 7** | 53 + 11 |
 | Usable weekly caps (distinct weeks) | 53 | 53 | **53** | 53 |
 | Cost per usable window | ₹452.60 | ₹345.98 | **₹384.42** | ₹407.20 |
 | Days on Pro | 365 | 278 | **306** | 322 |
 | Days on the free tier | 0 | 87 | **59** | 43 |
 | · of which weekends | 0 | 25 | **17** | 13 |
 | · of which workdays | 0 | 62 | **42** | 30 |
+
+**Reading "53 + a".** A year has 53 weekly resets, so **53** is the number of full weekly caps you can ever get, on any plan. **a** is the number of *extra* windows the plan pays for: early re-buys whose entry sprint starts within 7 days of the previous expiry, in a week that already had an exit sprint.
+- An extra window doesn't bring a new cap. It reopens the same week's cap for another 24h.
+- It's worth something only if your exit sprint left part of that week's cap unused: the extra window lets you finish it.
+- If your exit sprint used the whole cap, the extra window adds Pro days (features, models, Claude Code access), not more usage.
+
+So 60 windows = 53 full weekly caps + 7 chances to use up whatever an exit sprint left over.
 
 The same ratios hold for Max: 60 windows saves ₹19,998 a year on Max 5x (₹99,990 vs ₹1,19,988) and ₹39,998 on Max 20x (₹1,99,990 vs ₹2,39,988).
 
