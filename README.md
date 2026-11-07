@@ -27,6 +27,44 @@ Unofficial tool — not affiliated with Anthropic.
 
 **Paid windows vs usable caps:** buying doesn't reset the weekly meter, so an early re-buy's entry sprint uses the same weekly cap as the previous exit sprint. A year has only 52–53 weekly caps, so the 60-window plan pays for about 7 windows twice in exchange for more Pro days. Every stat tile shows a yearly subscription (auto-renew) next to the planned value. The − / + counters on Purchases, Weekly windows and Compromised workdays all move the same plan.
 
+## Auto-renew for a year vs the 6-window plan
+
+A worked example over the next 365 days, using the planner's own numbers: Claude Pro in India at ₹1,999 a month, weekly reset Friday 6:30 AM IST, current subscription started 8 Oct. Your numbers change with your dates, but the pattern holds.
+
+| Next 365 days | Auto-renew (12 months) | Plan · 55 windows | **Plan · 60 windows (default)** | Plan · 64 windows |
+|---|---|---|---|---|
+| Purchases | 12 | 9 | **10** | 11 |
+| Cash spent | ₹23,988 | ₹17,991 | **₹19,990** | ₹21,989 |
+| **Saved vs auto-renew** | — | **₹5,997 (25%)** | **₹3,998 (17%)** | ₹1,999 (8%) |
+| Weekly windows paid for | 53 | 55 | **60** | 64 |
+| Usable weekly caps (distinct weeks) | 53 | 53 | **53** | 53 |
+| Cost per usable window | ₹452.60 | ₹345.98 | **₹384.42** | ₹407.20 |
+| Days on Pro | 365 | 278 | **306** | 322 |
+| Days on the free tier | 0 | 87 | **59** | 43 |
+| · of which weekends | 0 | 25 | **17** | 13 |
+| · of which workdays | 0 | 62 | **42** | 30 |
+
+The same ratios hold for Max: 60 windows saves ₹19,998 a year on Max 5x (₹99,990 vs ₹1,19,988) and ₹39,998 on Max 20x (₹1,99,990 vs ₹2,39,988).
+
+### What you gain with the plan
+- **Less money for the same weekly capacity.** Every plan above still touches all 53 weekly caps of the year. You stop paying for the days in between.
+- **No unused capacity.** A paid month where you barely code still costs the full price on auto-renew. The plan puts your paid time where you'll use it.
+- **A clear rhythm.** Each period is an entry sprint, four full weeks and an exit sprint, so you know when to push hard and when to stop.
+
+### What it costs you
+- **Days without Pro.** Between 43 and 87 free-tier days a year, depending on the counter. Of those, 30 to 62 fall on workdays. On those days you have only free-tier limits and no Claude Code on your subscription.
+- **Sprints you have to use up.** The 24h entry and exit windows are worth having only if you can use up most of a week's cap in a day. If you can't, part of each entry and exit sprint goes unused.
+- **Early re-buys share a week.** To reach 60 windows, about 7 purchases come back within 7 days of expiry. Their entry sprint lands in a week whose cap your last exit sprint already used. You pay for more Pro days, not more capacity, which is why 60 costs more per usable window than 55.
+- **Admin.** You buy about 10 times a year at a set hour (e.g. Thursday 6:30 AM), and you must turn off auto-renew each time. The reminders and `365.ics` help, but a missed buy shortens window 1.
+- **Short months.** A purchase whose billing period covers February is only 28 days and fits 5 windows, not 6.
+- **Prices and terms can change.** The plan assumes calendar-month billing and a fixed weekly reset. If Anthropic changes either, re-detect, and the plan recalculates.
+
+### Which to choose
+- **Auto-renew:** you code with Claude every day, you can't plan around gaps, or the savings aren't worth the effort.
+- **55 windows:** you want the biggest savings and you're happy to have about 12 days off between periods.
+- **60 windows, the default:** a balance. It saves 17%, keeps you on Pro about 84% of the year, and has short 4–5 day gaps.
+- **64 windows:** you want almost-continuous Pro, saving one month's price a year.
+
 ## Project layout
 ```
 shared/            engine.js (pure planning logic), countries.js, ui/ (planner UI + styles)
