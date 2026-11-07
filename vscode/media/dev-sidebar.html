@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- Dev-only harness (excluded from the .vsix): renders the sidebar with a fake VS Code API. -->
+<html lang="en">
+<head><meta charset="utf-8"><title>Sidebar harness</title><link rel="stylesheet" href="shared/ui/styles.css"></head>
+<body class="popup sidebar vscode-dark" style="max-width:300px;border-right:1px solid #333">
+  <div class="wrap">
+    <div class="side-actions">
+      <button class="btn dark" id="open">Open full planner</button>
+      <button class="btn" id="detect">Detect reset</button>
+    </div>
+    <p class="note" id="msg" style="text-align:center"></p>
+    <div class="hero-buy" id="buy"></div>
+    <div class="card" id="now"></div>
+    <div id="extra" class="side-extra"></div>
+  </div>
+  <script type="module" src="dev-sidebar-mock.js"></script>
+  <script type="module" src="sidebar.js"></script>
+</body>
+</html>

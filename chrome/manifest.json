@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "6-Window Planner for Claude",
+  "short_name": "6-Window",
+  "version": "1.0.0",
+  "description": "Plan Claude Pro or Max purchases so each month touches 6 weekly quota windows. Auto-detects your reset and counts down to the optimal subscribe time.",
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "6-Window Planner",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png" }
+  },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": ["https://claude.ai/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["claude-detect.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

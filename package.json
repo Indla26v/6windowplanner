@@ -1,0 +1,12 @@
+{
+  "name": "six-window-planner-workspace",
+  "private": true,
+  "type": "module",
+  "description": "Shared engine + Chrome/Edge and VS Code extensions for planning Claude Pro purchases around the weekly quota reset.",
+  "scripts": {
+    "sync": "node scripts/sync-shared.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "test": "node scripts/test-engine.mjs",
+    "build": "node scripts/make-icons.mjs && node scripts/sync-shared.mjs"
+  }
+}

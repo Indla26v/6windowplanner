@@ -1,0 +1,7 @@
+{
+  "name": "six-window-planner",
+  "version": "0.1.0",
+  "description": "6-Window Planner beside the chat: optimal Claude Pro/Max subscribe countdown, current window, live weekly usage, rest alerts and the next purchases.",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

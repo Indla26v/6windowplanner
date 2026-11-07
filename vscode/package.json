@@ -1,0 +1,82 @@
+{
+  "name": "six-window-planner",
+  "displayName": "6-Window Planner for Claude",
+  "description": "Plan Claude Pro or Max purchases so each month touches 6 weekly quota windows. Status-bar countdown to the optimal subscribe time, auto-detected reset, 365-day calendar.",
+  "version": "1.2.2",
+  "publisher": "six-window",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "claude code",
+    "quota",
+    "subscription",
+    "planner"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sixWindow.open",
+        "title": "Open Planner",
+        "category": "6-Window"
+      },
+      {
+        "command": "sixWindow.detect",
+        "title": "Detect Weekly Reset from Claude Code Login",
+        "category": "6-Window"
+      },
+      {
+        "command": "sixWindow.confirmBuy",
+        "title": "I Just Subscribed (Track This Period)",
+        "category": "6-Window"
+      }
+    ],
+    "configuration": {
+      "title": "6-Window Planner",
+      "properties": {
+        "sixWindow.autoDetectFromClaudeCode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Read the weekly reset time and usage % using your local Claude Code login (checked at startup and every 30 minutes). The token is only sent to api.anthropic.com."
+        },
+        "sixWindow.statusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the subscribe countdown in the status bar."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "sixWindow",
+          "title": "6-Window Planner",
+          "icon": "media/activity.svg"
+        }
+      ]
+    },
+    "views": {
+      "sixWindow": [
+        {
+          "type": "webview",
+          "id": "sixWindow.now",
+          "name": "Now",
+          "icon": "media/activity.svg"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "package": "npx --yes @vscode/vsce package --allow-missing-repository"
+  }
+}
